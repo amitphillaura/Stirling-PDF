@@ -21,9 +21,7 @@ import stirling.software.proprietary.policy.progress.PolicyProgressListener;
 
 /**
  * Turns a policy's configured {@link InputSpec sources} into runs. Triggers decide <em>when</em>
- * and call {@link #run(Policy)}; they never touch sources. The controller uses the supplied-input
- * and ad-hoc entry points for on-demand work. This is the seam keeping triggers and sources
- * independent.
+ * and call {@link #run(Policy)}; the controller uses the supplied-input and ad-hoc entry points.
  */
 @Slf4j
 @Service

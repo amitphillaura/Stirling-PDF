@@ -167,9 +167,9 @@ public class PolicyController {
     }
 
     /**
-     * Stamp the policy with the correct owner. Creating a policy assigns the current user as owner;
-     * updating an existing one requires access to it and preserves its original owner, so the
-     * client can neither forge ownership on create nor reassign it on update.
+     * Assign the owner: create stamps the current user; update preserves the existing owner after
+     * an access check. So the client can neither forge ownership on create nor reassign it on
+     * update.
      */
     private Policy resolveOwnership(Policy incoming) {
         String id = incoming.id();
